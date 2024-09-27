@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="VPD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdk-pZ-V7C">
+                                <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyStateIcon." translatesAutoresizingMaskIntoConstraints="NO" id="ZU4-mQ-dZ2">
+                                        <rect key="frame" x="55.999999999999986" y="20" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="L7a-mT-mXW"/>
+                                            <constraint firstAttribute="width" constant="128" id="N8m-Yl-blD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No repository found" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M0-3D-9H2">
+                                        <rect key="frame" x="50.333333333333329" y="148" width="139" height="19.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3M0-3D-9H2" firstAttribute="top" secondItem="ZU4-mQ-dZ2" secondAttribute="bottom" id="3zt-1K-lWd"/>
+                                    <constraint firstAttribute="width" constant="240" id="Wmd-Of-fJ6"/>
+                                    <constraint firstItem="ZU4-mQ-dZ2" firstAttribute="top" secondItem="xdk-pZ-V7C" secondAttribute="top" constant="20" id="Yru-cZ-RlX"/>
+                                    <constraint firstItem="ZU4-mQ-dZ2" firstAttribute="centerX" secondItem="xdk-pZ-V7C" secondAttribute="centerX" id="jaI-ON-5bN"/>
+                                    <constraint firstAttribute="height" constant="240" id="lro-cg-sua"/>
+                                    <constraint firstItem="3M0-3D-9H2" firstAttribute="centerX" secondItem="xdk-pZ-V7C" secondAttribute="centerX" id="ooX-gu-O7U"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EkW-id-KST">
+                                <rect key="frame" x="30" y="112.66666666666669" width="333" height="705.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCf-52-h2Y">
+                                <rect key="frame" x="30" y="59" width="153.33333333333334" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
+                                <color key="textColor" name="AppTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="b3P-yW-dWq">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b3P-yW-dWq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1tZ-w0-4aI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EkW-id-KST" secondAttribute="trailing" constant="30" id="6GX-dS-KTF"/>
+                            <constraint firstItem="xdk-pZ-V7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BGM-Cq-kM7"/>
+                            <constraint firstItem="yCf-52-h2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="JTK-bC-Sxz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EkW-id-KST" secondAttribute="bottom" id="KKX-2Q-zwa"/>
+                            <constraint firstItem="b3P-yW-dWq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KiG-qC-QeB"/>
+                            <constraint firstItem="yCf-52-h2Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7c-3j-AGP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yCf-52-h2Y" secondAttribute="trailing" symbolic="YES" id="Vcl-bd-b7P"/>
+                            <constraint firstItem="EkW-id-KST" firstAttribute="top" secondItem="yCf-52-h2Y" secondAttribute="bottom" constant="20" id="We8-tt-jZS"/>
+                            <constraint firstItem="EkW-id-KST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fjw-lS-ut7"/>
+                            <constraint firstItem="xdk-pZ-V7C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tLE-oU-D9y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emptyView" destination="xdk-pZ-V7C" id="sXr-HF-dd8"/>
+                        <outlet property="loader" destination="b3P-yW-dWq" id="QYx-26-hAY"/>
+                        <outlet property="repositoriesTableView" destination="EkW-id-KST" id="jR0-Ld-EQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-2"/>
+        </scene>
+        <!--User Details View Controller-->
+        <scene sceneID="xa3-uP-dZT">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsViewController" modalPresentationStyle="fullScreen" id="itx-tV-ezz" customClass="UserDetailsViewController" customModule="VPD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oLh-Ki-4vc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2q-4N-YUr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COU-Bc-0P9">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNB-Lz-ebt">
+                                                <rect key="frame" x="10" y="50" width="50" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="qHh-fV-Ifi"/>
+                                                    <constraint firstAttribute="width" constant="50" id="qaA-wb-Fu3"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.backward" catalog="system">
+                                                    <color key="titleColor" name="AppTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backTapped:" destination="itx-tV-ezz" eventType="touchUpInside" id="t41-gp-Hyr"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-nO-ace">
+                                                <rect key="frame" x="30" y="99.999999999999986" width="333" height="219.66666666666663"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-9K-niV">
+                                                        <rect key="frame" x="76.666666666666686" y="2" width="180" height="176.66666666666666"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.50455298010000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="180" id="7Hh-z6-6Ts"/>
+                                                            <constraint firstAttribute="width" constant="180" id="gEb-fl-A5H"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-0F-Yy8">
+                                                        <rect key="frame" x="145" y="200" width="43" height="19.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                                        <color key="textColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eZl-hW-8Vw">
+                                                <rect key="frame" x="30" y="349.66666666666669" width="333" height="237.00000000000006"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R9d-Gx-nQl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="72.333333333333329"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDn-fb-CW7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="19.666666666666668"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Description">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="AppTextColor"/>
+                                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO3-Kq-Y9o">
+                                                                <rect key="frame" x="0.0" y="21.666666666666625" width="333" height="50.666666666666657"/>
+                                                                <string key="text">**Grit is no longer maintained. Check out libgit2/rugged.** Grit gives you object oriented read/write access to Git repositories via Ruby.</string>
+                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-Iv-QNY">
+                                                        <rect key="frame" x="0.0" y="82.333333333333314" width="333" height="72.333333333333314"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T4-Vf-NSe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="19.666666666666668"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Type">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="AppTextColor"/>
+                                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1J-7c-Eug">
+                                                                <rect key="frame" x="0.0" y="21.666666666666682" width="333" height="50.666666666666657"/>
+                                                                <string key="text">**Grit is no longer maintained. Check out libgit2/rugged.** Grit gives you object oriented read/write access to Git repositories via Ruby.</string>
+                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LT7-2R-YcW">
+                                                        <rect key="frame" x="0.0" y="164.66666666666669" width="333" height="72.333333333333314"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-cD-YnF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="19.666666666666668"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="URL">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="AppTextColor"/>
+                                                                            <font key="NSFont" size="14" name="Poppins-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj6-vB-JT5">
+                                                                <rect key="frame" x="0.0" y="21.666666666666625" width="333" height="50.666666666666657"/>
+                                                                <string key="text">**Grit is no longer maintained. Check out libgit2/rugged.** Grit gives you object oriented read/write access to Git repositories via Ruby.</string>
+                                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
+                                                                <color key="textColor" red="0.65882354970000001" green="0.64705884459999996" blue="0.66274511810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dOb-nO-ace" secondAttribute="trailing" constant="30" id="1I6-k6-NXR"/>
+                                            <constraint firstItem="dOb-nO-ace" firstAttribute="leading" secondItem="COU-Bc-0P9" secondAttribute="leading" constant="30" id="8dc-BJ-CHA"/>
+                                            <constraint firstItem="hNB-Lz-ebt" firstAttribute="top" secondItem="COU-Bc-0P9" secondAttribute="top" constant="50" id="Q72-sy-1qP"/>
+                                            <constraint firstAttribute="trailing" secondItem="eZl-hW-8Vw" secondAttribute="trailing" constant="30" id="S2I-6z-OrD"/>
+                                            <constraint firstItem="eZl-hW-8Vw" firstAttribute="leading" secondItem="COU-Bc-0P9" secondAttribute="leading" constant="30" id="YHe-tj-UOB"/>
+                                            <constraint firstItem="eZl-hW-8Vw" firstAttribute="top" secondItem="dOb-nO-ace" secondAttribute="bottom" constant="30" id="b7l-Ml-zfM"/>
+                                            <constraint firstItem="dOb-nO-ace" firstAttribute="top" secondItem="COU-Bc-0P9" secondAttribute="top" constant="100" id="f6A-3k-a2w"/>
+                                            <constraint firstAttribute="height" constant="852" id="sXo-xF-egg"/>
+                                            <constraint firstItem="hNB-Lz-ebt" firstAttribute="leading" secondItem="COU-Bc-0P9" secondAttribute="leading" constant="10" id="zOr-te-kRB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="COU-Bc-0P9" firstAttribute="top" secondItem="J2q-4N-YUr" secondAttribute="top" id="H9E-cw-RWJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="COU-Bc-0P9" secondAttribute="bottom" id="PcF-3D-bgc"/>
+                                    <constraint firstAttribute="trailing" secondItem="COU-Bc-0P9" secondAttribute="trailing" id="PiC-sa-skW"/>
+                                    <constraint firstItem="COU-Bc-0P9" firstAttribute="leading" secondItem="J2q-4N-YUr" secondAttribute="leading" id="xRP-Ge-JdW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o7k-kx-ZBW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="J2q-4N-YUr" secondAttribute="bottom" id="OIO-EM-imu"/>
+                            <constraint firstItem="J2q-4N-YUr" firstAttribute="trailing" secondItem="o7k-kx-ZBW" secondAttribute="trailing" id="R1Y-dJ-KDg"/>
+                            <constraint firstItem="COU-Bc-0P9" firstAttribute="width" secondItem="oLh-Ki-4vc" secondAttribute="width" id="blW-bj-XG6"/>
+                            <constraint firstItem="J2q-4N-YUr" firstAttribute="leading" secondItem="o7k-kx-ZBW" secondAttribute="leading" id="q2c-wO-DFv"/>
+                            <constraint firstItem="J2q-4N-YUr" firstAttribute="top" secondItem="oLh-Ki-4vc" secondAttribute="top" id="rmB-Ns-otG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="mO3-Kq-Y9o" id="lJy-R2-gwT"/>
+                        <outlet property="fullnameLabel" destination="ZeH-0F-Yy8" id="2WF-up-DVZ"/>
+                        <outlet property="profileImage" destination="YNg-9K-niV" id="EaT-Ru-Pvb"/>
+                        <outlet property="typeLabel" destination="I1J-7c-Eug" id="svP-oC-jiC"/>
+                        <outlet property="urlLabel" destination="aj6-vB-JT5" id="EKj-BO-j1G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aNt-LZ-5fO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.51908396946567" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="emptyStateIcon." width="512" height="384"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="AppTextColor">
+            <color red="0.0" green="0.18000000715255737" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
